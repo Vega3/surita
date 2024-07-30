@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stiles.css">
+    <title>Surita</title>
+    <script src="https://kit.fontawesome.com/bbabc02c0b.js" crossorigin="anonymous"></script>
+</head>
+<body class="boddy2">
+    <div class="signupbox"> 
+        <section>
+            <h1 class="pinkh">Heart Attached</h1>
+            <h2 class="pink">Enhance your health and vitality with dedicated guidance.</h2>
+        </section>
+        <section class="signup">
+            <h1>Sign Up</h1>
+            <form id="signUpForm" method="post" action="patient_home.html">
+                <i class="fa-solid fa-brain"></i>
+                <input class="inputt" id="name" type="text" name="full_name" placeholder="Full Name" required>
+                <br>
+
+                <i class="fa-solid fa-id-card pink-rocket"></i>
+                <input class="inputt" id="lastname" type="text" name="id" placeholder="ID" required>
+                <br>
+
+                <i class="fa-solid fa-at"></i>
+                <input class="inputt" id="email" type="email" name="email" placeholder="Email" required>
+                <br> 
+
+                <i class="fa-solid fa-lock"></i>
+                <input class="inputt" id="password" type="password" name="password" placeholder="Password" required>
+                <br>
+
+                <div class="rowf">
+                    <i class="fa-solid fa-cake-candles pink-candles"></i>
+                    <h3 class="normaletterf">Birthdate</h3> 
+                    <input class="inputtf" type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2024-12-31" required>
+                </div>
+                <br>
+                <button class="signupbtn" type="submit">Sign Up</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

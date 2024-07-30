@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita</title>
+    <link rel="stylesheet" href="css/stiles.css">
+</head>
+<body>
+    <header>
+        <h1>Reservar Cita en EPS</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Reserva tu Cita</h2>
+            <form id="reservation-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="id">Cédula de Ciudadanía:</label>
+                <input type="text" id="id" name="id" required>
+                <br>
+
+                <label for="specialist">Especialista:</label>
+                <select id="specialist" name="specialist" required>
+                    <option value="Pediatra">Pediatra</option>
+                    <option value="Odontologo">Odontólogo</option>
+                    <option value="General">General</option>
+                    <!-- Añadir más opciones si es necesario -->
+                </select>
+                <br>
+
+                <label for="appointment-date">Fecha:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+                <br>
+
+                <label for="appointment-time">Hora:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+                <br>
+
+                <button type="submit">Reservar Cita</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Horarios Disponibles</h2>
+            <ul id="appointments-list"></ul>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
