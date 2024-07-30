@@ -4,49 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar Cita</title>
-    <link rel="stylesheet" href="css/stiles.css">
+    <link rel="stylesheet" href="../css/reserva.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Reservar Cita en EPS</h1>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">SURITA</div>
+            <nav class="nav-icons">
+                <a href="patient_home.html"><i class="fa fa-home"></i></a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section>
-            <h2>Reserva tu Cita</h2>
+            <h2>Book your appointment</h2>
             <form id="reservation-form">
-                <label for="name">Nombre:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <br>
 
-                <label for="id">Cédula de Ciudadanía:</label>
+                <label for="id">ID:</label>
                 <input type="text" id="id" name="id" required>
                 <br>
 
-                <label for="specialist">Especialista:</label>
+                <label for="specialist">Specialist:</label>
                 <select id="specialist" name="specialist" required>
-                    <option value="Pediatra">Pediatra</option>
-                    <option value="Odontologo">Odontólogo</option>
+                    <option value="Pediatra">Pediatrician</option>
+                    <option value="Odontologo">Dentist</option>
                     <option value="General">General</option>
-                    <!-- Añadir más opciones si es necesario -->
                 </select>
                 <br>
 
-                <label for="appointment-date">Fecha:</label>
+                <label for="appointment-date">Date:</label>
                 <input type="date" id="appointment-date" name="appointment-date" required>
                 <br>
 
-                <label for="appointment-time">Hora:</label>
+                <label for="appointment-time">Hour:</label>
                 <input type="time" id="appointment-time" name="appointment-time" required>
                 <br>
 
-                <button type="submit">Reservar Cita</button>
+                <button type="submit">Book Appointment</button>
             </form>
-        </section>
-
-        <section>
-            <h2>Horarios Disponibles</h2>
-            <ul id="appointments-list"></ul>
         </section>
     </main>
 

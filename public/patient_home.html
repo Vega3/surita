@@ -3,56 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../css/stilesP.css">
-    <script src="https://kit.fontawesome.com/bbabc02c0b.js" crossorigin="anonymous"></script>
+    <title>Patient Home - Surita</title>
+    <link rel="stylesheet" href="../css/patient-home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header class="main-header">
-        <div class="titlee">
-            <h1>S U R I T A</h1>
+        <div class="header-content">
+            <div class="logo">SURITA</div>
+            <nav class="nav-icons">
+                <a href="#"><i class="fa fa-map"></i></a>
+                <a href="reserva.html"><i class="fa fa-calendar"></i></a>
+                <a href="#"><i class="fa fa-calendar-check"></i></a>
+                <a href="#"><i class="fa fa-user"></i></a>
+            </nav>
         </div>
-        <nav class="navigation">
-            <ul>
-                <li> 
-                    <a href="./map.html">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#">
-                        <i class="fa-regular fa-calendar-days"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html">
-                        <i class="fa-regular fa-calendar-plus"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-user-pen"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </header>
-    
 
-    <div class="container">
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome to Surita</h1>
+            <p>Let's start!</p>
+        </section>
 
-        <div class="left-column">
-            <img src="../images/pic3.jpg" alt="Descriptive Text" class="responsive-image">
-        </div>
+        <section class="next-appointments">
+            <h2>Your Next Appointments</h2>
+            <ul>
+                <li>Appointment with Dr. Smith on 2024-08-01 at 10:00 AM</li>
+                <li>Appointment with Dr. Jones on 2024-08-05 at 02:00 PM</li>
+            </ul>
+        </section>
 
-        <div class="right-column">
-            <main>
-                <h2>Welcome to Surita</h2>
-                <p>Lets start!</p>
-            </main>
-        </div>
-    </div>
-    
+        <section class="medical-history">
+            <h2>Your Medical History</h2>
+            <p>Recent Visits:</p>
+            <ul>
+                <li>2024-07-20: General Checkup</li>
+                <li>2024-07-15: Dental Cleaning</li>
+            </ul>
+        </section>
+
+        <section class="find-specialists">
+            <h2>Find Specialists</h2>
+            <p><a href="#">Click here</a> to search for available specialists and make an appointment.</p>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
