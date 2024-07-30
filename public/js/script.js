@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(result => {
             alert(result.message);
             reservationForm.reset(); // Limpiar el formulario
+            if (result.success) {
+                alert('Reserva realizada con éxito');
+                window.location.href = 'patient-home.html'; // Redirigir a la página de inicio
+            }
         })
         .catch(error => console.error('Error reservando cita:', error));
     });
