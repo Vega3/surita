@@ -1,5 +1,3 @@
-// map.js
-
 // Inicializa el mapa y dibuja la ruta
 function initMap() {
     // Crear un mapa centrado en la ubicación del usuario
