@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar Cita</title>
+    <!-- Link to external CSS file for reservation page -->
     <link rel="stylesheet" href="../css/reserva.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="main-header">
         <div class="header-content">
             <div class="logo">SURITA</div>
+            <!-- Navigation with icons -->
             <nav class="nav-icons">
                 <a href="patient_home.html"><i class="fa fa-home"></i></a>
             </nav>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Reservation Form Section -->
         <section>
             <h2>Book your appointment</h2>
             <form id="reservation-form">
+                <!-- Name Input -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <br>
 
+                <!-- ID Input -->
                 <label for="id">ID:</label>
                 <input type="text" id="id" name="id" required>
                 <br>
 
+                <!-- Specialist Selection -->
                 <label for="specialist">Specialist:</label>
                 <select id="specialist" name="specialist" required>
                     <option value="Pediatra">Pediatrician</option>
@@ -37,13 +46,16 @@
                 </select>
                 <br>
 
+                <!-- Appointment Date Input -->
                 <label for="appointment-date">Date:</label>
                 <input type="date" id="appointment-date" name="appointment-date" required>
                 <br>
 
+                <!-- Appointment Time Input -->
                 <label for="appointment-time">Hour:</label>
                 <input type="time" id="appointment-time" name="appointment-time" required>
                 <br>
+                <!-- Book Appointment Button -->
                 <a href="patient_home.html">
                     <button type="submit">Book Appointment</button>
                 </a>        
@@ -51,6 +63,7 @@
         </section>
     </main>
 
+    <!-- External JS file -->
     <script src="js/script.js"></script>
 </body>
 </html>
