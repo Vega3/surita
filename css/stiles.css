@@ -1,3 +1,4 @@
+/* Styles for login and signup boxes */
 .loginbox, .signupbox {
     border: 1px solid #ccc;
     box-shadow: 
@@ -14,20 +15,20 @@
     font-weight: bold;
 }
 
-
+/* Specific styles for login box */
 .loginbox {
     background-image: url('../images/pic1.jpg');
     border: none;
     filter: blur(0px); 
 }
 
-
+/* Specific styles for signup box */
 .signupbox {
     background-image: url('../images/pic2.jpg');
     border: none;
 }
 
-
+/* Background blur effect */
 .loginbox::before, .signupbox::before {
     content: "";
     position: absolute;
@@ -41,10 +42,13 @@
     z-index: -1; 
 }
 
+/* Opacity setting */
 .backg {
     opacity: 0.5;
 }
-.login {
+
+/* Common styles for login and signup forms */
+.login, .signup {
     width: 220px;
     height: 250px;
     margin: 0 auto;
@@ -54,18 +58,8 @@
     font-family: 'Optima';
 }
 
- .signup{
-    width: 220px;
-    height: 250px;
-    margin: 0 auto;
-    margin-right: 50px;
-    opacity: 1;
-    text-align: center;
-    font-family: 'Optima';
-}
-
+/* Button styles for login and signup */
 .loginbtn, .signupbtn {
-    
     background: #90591f54;
     border-radius: 999px;
     box-shadow: #90591f48 0 10px 20px -10px;
@@ -85,10 +79,9 @@
     width: fit-content;
     word-break: break-word;
     border: 0;
-        
- 
 }
 
+/* Body background for login and signup pages */
 .boddy {
     background-image: url('../images/pic1.jpg');
     background-size: cover;
@@ -104,6 +97,8 @@
     filter: blur(0px); 
     top: 70%;
 }
+
+/* Title styles */
 .pinkh {
     color: rgb(255, 255, 255);
     font-family: 'Optima',fantasy;
@@ -113,9 +108,9 @@
     font-size: 55px;
     margin-left: 120px;
     padding-top: 17px;
-    
 }
 
+/* Subtitle styles */
 .pink {
     color: rgb(255, 255, 255);
     font-family: 'Optima';
@@ -126,63 +121,51 @@
     margin-left: 40px;
     padding-top: -30px;
     display: block;
-    
 }
 
-.inputt {
+/* Input field styles */
+.inputt, .inputtf {
     border-radius: 8px;
 }
 
 .inputtf {
-    border-radius: 8px;
     text-align: right;
 }
 
-.normaletter {
+/* Normal text styles */
+.normaletter, .normaletterf {
     text-align: left;
     font-family: 'Optima';
     font-size: 15px;
     letter-spacing: 0px;
     padding-top: -10px;
     margin-right: 5px; 
-
 }
 
 .normaletterf {
-    text-align: left;
-    font-family: 'Optima';
-    font-size: 15px;
-    letter-spacing: 0px;
-    padding-top: -10px;
-    margin-right: 7.5px; 
-
+    margin-right: 7.5px;
 }
 
-.row {
+/* Row container styles */
+.row, .rowf {
     display: flex; 
     align-items: center; 
 }
 
 .rowf {
-    display: flex; 
-    align-items: center; 
     margin-left: 15px;
 }
-.row {
-    display: flex; 
-    align-items: center; 
-}
 
-
-.redirectt{
+/* Redirect link styles */
+.redirectt {
     text-align: right;
     font-family: 'Optima';
     font-size: 15px;
     text-decoration: none; 
     color: #924e01e2;
-    
 }
 
+/* Color styles */
 .pink-rocket {
     color: #0f426bee; 
 }
@@ -190,60 +173,4 @@
 .pink-candles {
     color: #69131d; 
     margin-right: 5px;
-}
-
-
-/* reserva_cita css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.reservation-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.reservation-title {
-    text-align: center;
-    color: #333;
-}
-
-.form-field {
-    margin-bottom: 15px;
-}
-
-.form-field label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.form-field input, .form-field select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.submit-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: #45a049;
 }

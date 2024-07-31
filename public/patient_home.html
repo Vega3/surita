@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Home - Surita</title>
-    <!-- Link to external CSS file for patient home page -->
     <link rel="stylesheet" href="../css/patient-home.css">
-    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="../css/map.css"> <!-- Nuevo archivo CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=abcd1234&callback=initMap" async defer></script><!-- API de Google Maps -->
+    <script src="js/location.js" defer></script> <!-- Archivo JS para obtener la ubicación -->
+    <script src="js/map.js" defer></script> <!-- Archivo JS para el mapa -->
 </head>
 <body>
-    <!-- Header Section -->
     <header class="main-header">
         <div class="header-content">
             <div class="logo">SURITA</div>
-            <!-- Navigation with icons -->
             <nav class="nav-icons">
                 <a href="#"><i class="fa fa-map"></i></a>
                 <a href="reserva.html"><i class="fa fa-calendar"></i></a>
@@ -24,15 +24,12 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Welcome Section -->
         <section class="welcome-section">
             <h1>Welcome to Surita</h1>
             <p>Let's start!</p>
         </section>
 
-        <!-- Next Appointments Section -->
         <section class="next-appointments">
             <h2>Your Next Appointments</h2>
             <ul>
@@ -41,7 +38,6 @@
             </ul>
         </section>
 
-        <!-- Medical History Section -->
         <section class="medical-history">
             <h2>Your Medical History</h2>
             <p>Recent Visits:</p>
@@ -51,14 +47,17 @@
             </ul>
         </section>
 
-        <!-- Find Specialists Section -->
         <section class="find-specialists">
             <h2>Find Specialists</h2>
             <p><a href="#">Click here</a> to search for available specialists and make an appointment.</p>
         </section>
+
+        <section class="map-section">
+            <h2>Find the Nearest IPS</h2>
+            <div id="map"></div> <!-- Contenedor para el mapa -->
+        </section>
     </main>
 
-    <!-- External JS file -->
     <script src="js/script.js"></script>
 </body>
 </html>

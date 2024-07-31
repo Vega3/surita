@@ -1,0 +1,11 @@
+.map-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
