@@ -9,10 +9,11 @@ body {
 }
 
 .main-header {
-    background-color: #9ab5e6;
+    background-color: #6642b5;
     color: #fff;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(206, 153, 153, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
 .header-content {
