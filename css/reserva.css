@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-color: #97BCD7;
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -8,10 +8,11 @@ body {
 }
 
 .main-header {
-    background-color: #002366;
+    background-color: #1B4769;
     color: #fff;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
 .header-content {
@@ -30,7 +31,7 @@ body {
 }
 
 .nav-icons a {
-    color: #ffeb3b;
+    color: #f2d4fa;
     font-size: 20px;
     margin-left: 20px;
     text-decoration: none;
@@ -53,10 +54,11 @@ main {
     align-items: center;
     flex-direction: column;
     min-height: 80vh;
+    color: #445b5a;
 }
 
 section {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #75A4C5;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -65,7 +67,7 @@ section {
 
 section h2 {
     font-size: 32px;
-    color: #ff69b4;
+    color: #CADBE7;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -90,17 +92,18 @@ input, select {
 
 button {
     padding: 10px 20px;
-    background-color: #ff69b4;
+    background-color: #ebaaca;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 30%;
 }
 
 button:hover {
-    background-color: #ff1493;
+    background-color: #e157a0;
 }
 
 #appointments-list {

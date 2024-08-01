@@ -1,19 +1,18 @@
-/* Archivo CSS para la página de inicio del paciente */
 
 body {
     font-family: 'Arial', sans-serif;
     background: url('../img/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: #d62222;
     margin: 0;
     padding: 0;
 }
 
 .main-header {
-    background-color: #002366;
+    background-color: #9ab5e6;
     color: #fff;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(206, 153, 153, 0.1);
 }
 
 .header-content {
