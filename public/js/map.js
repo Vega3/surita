@@ -19,8 +19,8 @@ function initMap() {
         // Realizar una búsqueda de IPS cerca de la ubicación del usuario
         service.nearbySearch({
             location: userLocation,
-            radius: 5000, // Radio de búsqueda en metros
-            type: ['hospital'] // Tipo de lugar
+            radius: 1000, // Radio de búsqueda en metros
+            type: ['doctor'] // Tipo de lugar
         }, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 if (results.length > 0) {
