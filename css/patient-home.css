@@ -1,10 +1,9 @@
-
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(../images/pic6.jpg);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen dentro del contenedor */
-    background-attachment: fixed; /* La imagen permanece fija al hacer scroll */
+    background-image: url('../images/pic6.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
     color: #fff;
     margin: 0;
     padding: 0;
@@ -60,19 +59,69 @@ main {
     text-shadow: 2px 2px 4px #000;
 }
 
-.next-appointments, .medical-history, .find-specialists {
-    background-color: rgba(0, 0, 0, 0.7);
+
+
+.choose-us {
+    background-color:  rgba(105, 99, 107, 0.7);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(238, 201, 244, 0.5);
     margin: 20px;
     width: 80%;
     max-width: 600px;
 }
 
+.promise {
+    background-color: rgba(213, 170, 222, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(238, 201, 244, 0.5);
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+
+.options {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(5px);          
+    border-radius: 10px;                  
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);   
+    margin: 20px;
+    color: #123a5b;
+}
+
+.options h2 {
+    font-size: 32px;
+    color: #6a2f9b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.options p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options-list {
+    display: flex;
+    justify-content: center; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.options-list li {
+    margin: 0 15px; 
+    color: #9c79e6;
+}
+
+
 h2 {
     font-size: 32px;
-    color: #e69ec2;
+    color: #9817ac;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -83,7 +132,7 @@ ul {
 }
 
 ul li {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(247, 208, 238, 0.2);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
