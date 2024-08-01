@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #97BCD7;
+    background-image: url(../images/pic5.jpg);
     background-size: cover;
     color: #fff;
     margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 .main-header {
-    background-color: #1B4769;
+    background-color: #6642b5;
     color: #fff;
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,16 +58,21 @@ main {
 }
 
 section {
-    background-color: #75A4C5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(5px);          
+    border-radius: 10px;                  
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);   
     margin: 20px;
+    padding: 20px;
+    color: #123a5b;                           
 }
+
+
 
 section h2 {
     font-size: 32px;
-    color: #CADBE7;
+    color: #6a2f9b;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -82,12 +87,22 @@ label {
     margin-bottom: 5px;
 }
 
-input, select {
+input {
     padding: 10px;
     margin-bottom: 15px;
-    border: none;
+    border: 1px;
     border-radius: 5px;
     font-size: 16px;
+  
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #953566;
 }
 
 button {
