@@ -10,9 +10,10 @@ function initMap() {
         const userMarker = new google.maps.Marker({
             position: userLocation,
             map: map,
-            title: 'Tu Ubicación'
+            title: 'Your Location'
         });
 
+        // Define las ubicaciones de las IPS
         const ipsLocations = [
             { lat: 4.7110, lng: -74.0721, name: 'IPS 1' },
             { lat: 4.7100, lng: -74.0730, name: 'IPS 2' },
@@ -35,7 +36,7 @@ function initMap() {
             });
         });
 
-        // Calcular la IPS más cercana
+        // Calcula la IPS más cercana
         const nearestIpsLocation = findNearestIps(userLocation, ipsLocations);
 
         const directionsService = new google.maps.DirectionsService();
