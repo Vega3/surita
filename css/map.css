@@ -1,11 +1,78 @@
-.map-section {
-    margin-top: 20px;
-    text-align: center;
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../images/pic5.jpg);
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-#map {
-    height: 400px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.main-header {
+    background-color: #6642b5;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-icons a {
+    color: #f2d4fa;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    color: #445b5a;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(5px);          
+    border-radius: 10px;                  
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);   
+    margin: 20px;
+    padding: 20px;
+    color: #123a5b;                           
+}
+
+
+
+section h2 {
+    font-size: 32px;
+    color: #6a2f9b;
+    margin-bottom: 20px;
+    text-align: center;
 }
