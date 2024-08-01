@@ -10,64 +10,55 @@ function initMap() {
         const userMarker = new google.maps.Marker({
             position: userLocation,
             map: map,
-            title: 'Your Location'
+            title: 'Tu Ubicación'
         });
 
-        // Define las ubicaciones de las IPS
-        const ipsLocations = [
-            { lat: 4.7110, lng: -74.0721, name: 'IPS 1' },
-            { lat: 4.7100, lng: -74.0730, name: 'IPS 2' },
-            { lat: 4.7120, lng: -74.0740, name: 'IPS 3' }
-        ];
+        // Crear el servicio de lugares
+        const service = new google.maps.places.PlacesService(map);
 
-        ipsLocations.forEach(ips => {
-            const ipsMarker = new google.maps.Marker({
-                position: { lat: ips.lat, lng: ips.lng },
-                map: map,
-                title: ips.name
-            });
+        // Realizar una búsqueda de IPS cerca de la ubicación del usuario
+        service.nearbySearch({
+            location: userLocation,
+            radius: 5000, // Radio de búsqueda en metros
+            type: ['hospital'] // Tipo de lugar
+        }, function (results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                if (results.length > 0) {
+                    const nearestIps = results[0]; // IPS más cercana
+                    const ipsLocation = nearestIps.geometry.location;
 
-            const infoWindow = new google.maps.InfoWindow({
-                content: `<div><h3>${ips.name}</h3><p>Ubicación: ${ips.lat}, ${ips.lng}</p></div>`
-            });
+                    const ipsMarker = new google.maps.Marker({
+                        position: ipsLocation,
+                        map: map,
+                        title: nearestIps.name
+                    });
 
-            ipsMarker.addListener('click', () => {
-                infoWindow.open(map, ipsMarker);
-            });
-        });
+                    // Crear la ruta entre la ubicación del usuario y la IPS más cercana
+                    const directionsService = new google.maps.DirectionsService();
+                    const directionsRenderer = new google.maps.DirectionsRenderer();
+                    directionsRenderer.setMap(map);
 
-        // Calcula la IPS más cercana
-        const nearestIpsLocation = findNearestIps(userLocation, ipsLocations);
+                    const request = {
+                        origin: userLocation,
+                        destination: ipsLocation,
+                        travelMode: 'DRIVING'
+                    };
 
-        const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer();
-        directionsRenderer.setMap(map);
-
-        const request = {
-            origin: userLocation,
-            destination: nearestIpsLocation,
-            travelMode: 'DRIVING'
-        };
-
-        directionsService.route(request, function (result, status) {
-            if (status === 'OK') {
-                directionsRenderer.setDirections(result);
+                    directionsService.route(request, function (result, status) {
+                        if (status === 'OK') {
+                            directionsRenderer.setDirections(result);
+                        } else {
+                            alert('No se pudo mostrar la ruta debido a: ' + status);
+                        }
+                    });
+                } else {
+                    alert('No se encontraron IPS cercanas.');
+                }
             } else {
-                console.error('No se pudieron mostrar las direcciones: ' + status);
+                alert('Error en la búsqueda de lugares: ' + status);
             }
         });
     }, function () {
         alert('Error al obtener la ubicación.');
     });
-}
-
-function findNearestIps(userLocation, ipsLocations) {
-    return ipsLocations.reduce((nearest, ips) => {
-        const distanceToIps = google.maps.geometry.spherical.computeDistanceBetween(
-            new google.maps.LatLng(userLocation.lat, userLocation.lng),
-            new google.maps.LatLng(ips.lat, ips.lng)
-        );
-
-        return (distanceToIps < nearest.distance) ? { ips, distance: distanceToIps } : nearest;
-    }, { ips: null, distance: Infinity }).ips;
 }
