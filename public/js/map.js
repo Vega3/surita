@@ -20,7 +20,7 @@ function initMap() {
         service.nearbySearch({
             location: userLocation,
             radius: 1000, // Radio de búsqueda en metros
-            type: ['doctor'] // Tipo de lugar
+            type: ['hospital'] // Tipo de lugar
         }, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 if (results.length > 0) {
